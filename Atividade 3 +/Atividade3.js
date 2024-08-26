@@ -66,6 +66,7 @@ function ex04() {
 function ex05() {
   let numeroSecreto = parseInt(Math.random() * 101); //usando 101 para quando arredondar colocar o numero em 100
   let tentativas = 1;
+  let chute;
 
   while (chute != numeroSecreto) {
     let chute = prompt("Escolha um número entre 1 e 100: ");
