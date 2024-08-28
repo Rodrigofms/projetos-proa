@@ -10,13 +10,21 @@ function ex02() {
   let numPrimo = prompt("Digite um numero: ");
   let numPrimoConv = parseInt(numPrimo)
 
-  if (numPrimoConv <= 0) {
-    console.log("O numero " + numPrimo + " nao e primo pois e igual a 0 ou negativo");
+  if (numPrimoConv <= 1) {
+    console.log("O número " + numPrimo + " não é primo pois é menor ou igual a 1.");
   } else {
-    if (numPrimoConv % 1 === 0 && numPrimoConv % numPrimoConv === 0) {
-      console.log("O numero " + numPrimo + " e primo");
+    let isPrimo = true;
+    for (let i = 2; i <= Math.sqrt(numPrimoConv); i++) {
+      if (numPrimoConv % i === 0) {
+        isPrimo = false;
+        break;
+      }
+    }
+
+    if (isPrimo) {
+      console.log("O número " + numPrimo + " é primo.");
     } else {
-      console.log("O numero " + numPrimo + " nao e primo");
+      console.log("O número " + numPrimo + " não é primo.");
     }
   }
 }
